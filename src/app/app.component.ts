@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'emailform';
+    email: string = '';
+    submittedMessage: string;
+
+    constructor() {
+
+    }
+
+    onSubmit() {
+        this.submittedMessage = 'Email submitted: ' + this.email;
+    }
 }
